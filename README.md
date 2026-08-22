@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/dt-logo.png.png" alt="DT Logo" width="190"/>
+<img src="./assets/assets/dt-logo.png" alt="DT Logo" width="190"/>
 
 # 🎮 GAME DEVELOPMENT PORTFOLIO
 
