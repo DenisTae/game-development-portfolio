@@ -14,7 +14,7 @@ Salva a la ciudad y al océano cerrando grifos y limpiando la contaminación en 
 ## 📸 Capturas de Pantalla
 <div align="center">
   <img src="img/gameplay.png" width="32%" alt="Ecocity Gameplay 1">
-  <img src="img/niveles" width="32%" alt="Ecocity Gameplay 2">
+  <img src="img/niveles.png" width="32%" alt="Ecocity Gameplay 2">
   <img src="img/portada.png" width="32%" alt="Ecocity Gameplay 3">
 </div>
 ## 🛠️ Tecnologías y Características
