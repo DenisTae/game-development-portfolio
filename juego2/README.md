@@ -11,6 +11,12 @@ Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlac
 
 ## 📌 Descripción del Proyecto
 Explora una ciudad ecológica junto a Rock, interactuando con sistemas de energía renovable en un entorno tridimensional.
+## 📸 Capturas de Pantalla
+<div align="center">
+  <img src="img/gameplay.png" width="32%" alt="Ecocity Gameplay 1">
+  <img src="img/portada.png" width="32%" alt="Ecocity Gameplay 2">
+  <img src="img/reciclaje.png" width="32%" alt="Ecocity Gameplay 3">
+</div>
 
 ## 🛠️ Tecnologías y Características
 * **Three.js (WebGL):** Renderizado de entornos tridimensionales interactivos en la web.
