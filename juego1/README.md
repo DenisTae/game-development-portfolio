@@ -1,13 +1,18 @@
-# MathVenture ➕🏃‍♂️
+# 🎮 Mathventure (Juego 01)
 
-**MathVenture** es un juego de tipo *Infinite Runner* en 2D que combina la agilidad de los juegos de plataformas con la destreza mental.
+¡Bienvenido al repositorio de **Mathventure**! Un videojuego de tipo *Infinite Runner 2D* desarrollado como parte de mi portafolio de Game Development.
 
-## 🌟 Características
-- **Generación Procedural:** Los obstáculos y las operaciones matemáticas aparecen de forma dinámica.
-- **Lógica Matemática:** Para superar ciertos muros, el jugador debe resolver ecuaciones generadas aleatoriamente antes de chocar.
-- **Progresión de Dificultad:** La velocidad de desplazamiento y la complejidad de las operaciones aumentan conforme se avanza.
+## 🚀 Enlaces Rápidos
+* 🌐 **[Jugar en Línea](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)**.
 
-## 📐 Detalles Técnicos
-- Construido sobre **HTML5 Canvas** con renderizado de alto rendimiento.
-- Sistema de físicas personalizado (gravedad, saltos y colisiones rectangulares).
-- Uso de la **Web Audio API** para efectos de sonido generados por código.
+*(Nota: No olvides cambiar `TU_USUARIO` en ambos enlaces por tu nombre de usuario real de GitHub).*
+
+---
+
+## 📌 Descripción del Proyecto
+Resuelve operaciones matemáticas a toda velocidad mientras esquivas obstáculos generados proceduralmente. El juego combina reflejos rápidos con agilidad mental en un entorno dinámico.
+
+## 🛠️ Tecnologías y Características
+* **HTML5 Canvas:** Utilizado para el renderizado gráfico 2D en tiempo real.
+* **JavaScript (Vainilla):** Controla el bucle del juego, las físicas de salto, la generación de obstáculos y la validación de operaciones matemáticas.
+* **CSS3:** Diseño responsivo con estética arcade y efectos visuales modernos.
