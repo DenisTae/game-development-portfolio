@@ -7,8 +7,6 @@ Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlac
 
 👉 **[Jugar a Ecocity en Vivo](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)**
 
-*(Nota: Recuerda cambiar `TU_USUARIO` por tu nombre de usuario real de GitHub).*
-
 ---
 
 ## 📌 Descripción del Proyecto
