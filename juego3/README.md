@@ -11,6 +11,12 @@ Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlac
 
 ## 📌 Descripción del Proyecto
 Guía a Estrellita en la oscuridad; tu nivel de nutrición determina directamente tu radio de visión en el laberinto.
+## 📸 Capturas de Pantalla
+<div align="center">
+  <img src="img/gameplay.png" width="32%" alt="Ecocity Gameplay 1">
+  <img src="img/nivel.png" width="32%" alt="Ecocity Gameplay 2">
+  <img src="img/portada.png" width="32%" alt="Ecocity Gameplay 3">
+</div>
 
 ## 🛠️ Tecnologías y Características
 * **Canvas API:** Manipulación de gráficos y gradientes dinámicos para el efecto de oscuridad y visión.
