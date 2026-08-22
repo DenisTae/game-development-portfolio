@@ -11,7 +11,12 @@ Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlac
 
 ## 📌 Descripción del Proyecto
 Salva a la ciudad y al océano cerrando grifos y limpiando la contaminación en niveles de dificultad ascendente.
-
+## 📸 Capturas de Pantalla
+<div align="center">
+  <img src="img/gameplay.png" width="32%" alt="Ecocity Gameplay 1">
+  <img src="img/niveles" width="32%" alt="Ecocity Gameplay 2">
+  <img src="img/portada.png" width="32%" alt="Ecocity Gameplay 3">
+</div>
 ## 🛠️ Tecnologías y Características
 * **JavaScript Arrays y Lógica Arcade:** Gestión de elementos en pantalla y oleadas de dificultad.
 * **LocalStorage:** Persistencia de puntajes y récords de jugador.
