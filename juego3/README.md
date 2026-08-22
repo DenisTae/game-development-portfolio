@@ -1,12 +1,17 @@
-# Healthy Star 🌟🍎
+# 🌟 Healthy Star (Juego 03)
 
-**Healthy Star** es un juego de laberintos y exploración 2D centrado en el impacto de la nutrición en nuestro cuerpo.
+¡Bienvenido al repositorio de **Healthy Star**! Un videojuego de laberinto 2D desarrollado como parte de mi portafolio de Game Development.
 
-## 🌟 Características
-- **Mecánica de Visión Limitada:** El mapa está sumido en la oscuridad. El radio de luz del jugador depende de la "salud" del personaje.
-- **Recolección Estratégica:** Comer alimentos saludables (frutas/verduras) expande el campo de visión, mientras que la comida chatarra lo reduce casi a cero.
-- **Generación de Laberintos:** Niveles estructurados para fomentar la exploración.
+## 🚀 Jugar en Línea
+Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlace:
 
-## 📐 Detalles Técnicos
-- Manipulación avanzada del `CanvasRenderingContext2D`.
-- Uso intensivo de **Radial Gradients** y máscaras de recorte (`globalCompositeOperation`) para simular la iluminación en tiempo real.
+👉 **[Jugar a Healthy Star en Vivo](https://denistae.github.io/game-development-portfolio/juego3/juego3.html)**
+
+---
+
+## 📌 Descripción del Proyecto
+Guía a Estrellita en la oscuridad; tu nivel de nutrición determina directamente tu radio de visión en el laberinto.
+
+## 🛠️ Tecnologías y Características
+* **Canvas API:** Manipulación de gráficos y gradientes dinámicos para el efecto de oscuridad y visión.
+* **JavaScript (Vainilla):** Mecánicas de movimiento, colisiones y gestión del estado nutricional.
