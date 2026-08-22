@@ -49,7 +49,3 @@ Puedes revisar la descripción de cada proyecto o jugarlos directamente haciendo
 ## 💻 Instrucciones de Ejecución Local
 
 Todos los juegos son **100% Client-Side**. No requieren instalación de dependencias, Node.js ni bases de datos.
-
-1. Clona este repositorio:
-   ```bash
-   git clone [https://github.com/TU_USUARIO/game-development-portfolio.git](https://github.com/TU_USUARIO/game-development-portfolio.git)
