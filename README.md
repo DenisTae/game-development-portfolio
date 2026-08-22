@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/dt-logo.png" alt="DT Logo" width="190"/>
+<img src="./assets/dt-logo.png.png" alt="DT Logo" width="190"/>
 
 # 🎮 GAME DEVELOPMENT PORTFOLIO
 
@@ -125,6 +125,3 @@ A continuación se presentan los proyectos incluidos en este portafolio.
 </div>
 
 ---
-
-## 📂 Estructura del Proyecto
-
