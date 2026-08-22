@@ -1,19 +1,17 @@
-# 🌟 Healthy Star (Juego 03)
+# 💧 Héroe del Agua (Juego 04)
 
-¡Bienvenido al repositorio de **Healthy Star**! Un videojuego de laberinto 2D desarrollado como parte de mi portafolio de Game Development.
+¡Bienvenido al repositorio de **Héroe del Agua**! Un videojuego arcade desarrollado como parte de mi portafolio de Game Development.
 
 ## 🚀 Jugar en Línea
 Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlace:
 
-👉 **[Jugar a Healthy Star en Vivo](https://denistae.github.io/game-development-portfolio/juego4/juego4.html)**
-
-*(Nota: Recuerda cambiar `TU_USUARIO` por tu nombre de usuario real de GitHub).*
+👉 **[Jugar a Héroe del Agua en Vivo](https://denistae.github.io/game-development-portfolio/juego4/juego4.html)**
 
 ---
 
 ## 📌 Descripción del Proyecto
-Guía a Estrellita en la oscuridad; tu nivel de nutrición determina directamente tu radio de visión en el laberinto.
+Salva a la ciudad y al océano cerrando grifos y limpiando la contaminación en niveles de dificultad ascendente.
 
 ## 🛠️ Tecnologías y Características
-* **Canvas API:** Manipulación de gráficos y gradientes dinámicos para el efecto de oscuridad y visión.
-* **JavaScript (Vainilla):** Mecánicas de movimiento, colisiones y gestión del estado nutricional.
+* **JavaScript Arrays y Lógica Arcade:** Gestión de elementos en pantalla y oleadas de dificultad.
+* **LocalStorage:** Persistencia de puntajes y récords de jugador.
