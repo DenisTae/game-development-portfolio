@@ -81,47 +81,70 @@ El objetivo principal es demostrar la aplicación práctica de conocimientos de 
 
 ## 🚀 Galería de Juegos
 
-A continuación se presentan los proyectos incluidos en este portafolio.
-
-| # | Proyecto | Género | Descripción | Estado |
-|:--:|:---|:---|:---|:--:|
-| **01** | **MathVenture** | Infinite Runner 2D | Resuelve operaciones matemáticas mientras avanzas y esquivas obstáculos. | 🟢 Disponible |
-| **02** | **EcoCity** | Simulación 3D | Explora una ciudad ecológica e interactúa con sistemas de energía renovable. | 🟢 Disponible |
-| **03** | **Healthy Star** | Laberinto 2D | Guía a Estrellita a través de la oscuridad utilizando una mecánica basada en nutrición y visión. | 🟢 Disponible |
-| **04** | **Héroe del Agua** | Arcade Top-Down | Protege la ciudad y el océano cerrando grifos y eliminando fuentes de contaminación. | 🟢 Disponible |
-| **05** | **Detrás de la Pantalla** | Novela Visual | Experiencia narrativa interactiva centrada en el impacto del ciberbullying. | 🟢 Disponible |
-| **06** | **Llega a Fin de Mes** | Simulador de Vida | Administra tu sueldo, ahorros, gastos y felicidad durante 30 días. | 🟢 Disponible |
-
----
-
-## 🎮 Acceso a los Juegos
-
 <div align="center">
 
-### 01 — MathVenture
+### 🎮 01 — MathVenture
 
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-MATHVENTURE-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)
+**Infinite Runner 2D**
 
-### 02 — EcoCity
+Resuelve operaciones matemáticas mientras avanzas y esquivas obstáculos.
 
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-ECOCITY-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego2/juego2.html)
-
-### 03 — Healthy Star
-
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-HEALTHY%20STAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego3/juego3.html)
-
-### 04 — Héroe del Agua
-
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-H%C3%89ROE%20DEL%20AGUA-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego4/juego4.html)
-
-### 05 — Detrás de la Pantalla
-
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-DETR%C3%81S%20DE%20LA%20PANTALLA-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego5/juego5.html)
-
-### 06 — Llega a Fin de Mes
-
-[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-LLEGA%20A%20FIN%20DE%20MES-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego6/juego6.html)
-
-</div>
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego1)
 
 ---
+
+### 🌱 02 — EcoCity
+
+**Simulación 3D**
+
+Explora una ciudad ecológica e interactúa con sistemas de energía renovable.
+
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego2/juego2.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego2)
+
+---
+
+### ⭐ 03 — Healthy Star
+
+**Laberinto 2D**
+
+Guía a Estrellita a través de la oscuridad utilizando una mecánica basada en nutrición y visión.
+
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego3/juego3.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego3)
+
+---
+
+### 💧 04 — Héroe del Agua
+
+**Arcade Top-Down**
+
+Protege la ciudad y el océano cerrando grifos y eliminando fuentes de contaminación.
+
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego4/juego4.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego4)
+
+---
+
+### 🖥️ 05 — Detrás de la Pantalla
+
+**Novela Visual**
+
+Experiencia narrativa interactiva centrada en el impacto del ciberbullying.
+
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego5/juego5.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego5)
+
+---
+
+### 💰 06 — Llega a Fin de Mes
+
+**Simulador de Vida**
+
+Administra tu sueldo, ahorros, gastos y felicidad durante 30 días.
+
+[![JUGAR](https://img.shields.io/badge/▶%20JUGAR-012169?style=for-the-badge)](https://denistae.github.io/game-development-portfolio/juego6/juego6.html)
+[![VER CÓDIGO](https://img.shields.io/badge/💻%20VER%20CÓDIGO-C9A23F?style=for-the-badge&logo=github&logoColor=black)](https://github.com/denistae/game-development-portfolio/tree/main/juego6)
+
+</div>
