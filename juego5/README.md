@@ -1,12 +1,17 @@
-# Detrás de la Pantalla 📱💬
+# 📱 Detrás de la Pantalla (Juego 05)
 
-Una experiencia narrativa interactiva (Novela Visual) diseñada para reflexionar sobre el ciberbullying desde múltiples perspectivas (víctima y espectador).
+¡Bienvenido al repositorio de **Detrás de la Pantalla**! Una novela visual desarrollada como parte de mi portafolio de Game Development.
 
-## 🌟 Características
-- **Narrativa Ramificada:** Múltiples finales basados en un árbol de decisiones morales.
-- **Simulación de Interfaz:** Recreación realista de un teléfono inteligente con notificaciones emergentes, mensajes directos y redes sociales.
-- **Medidores Emocionales:** Las decisiones afectan directamente las estadísticas de "Ansiedad", "Aislamiento" y "Empatía" de los personajes.
+## 🚀 Jugar en Línea
+Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlace:
 
-## 📐 Detalles Técnicos
-- Fuerte dependencia en **CSS3** (Flexbox, Backdrop-filters, transiciones y animaciones clave) para la UI del dispositivo móvil.
-- Implementación de promesas en JS (Async/Await) para controlar el ritmo narrativo y el efecto de máquina de escribir (*Typewriter effect*).
+👉 **[Jugar a Detrás de la Pantalla en Vivo](https://denistae.github.io/game-development-portfolio/juego5/juego5.html)**
+
+---
+
+## 📌 Descripción del Proyecto
+Aventura narrativa sobre el ciberbullying con un árbol de decisiones morales y mecánicas de impacto emocional.
+
+## 🛠️ Tecnologías y Características
+* **JavaScript Asíncrono:** Manejo de transiciones de texto, diálogos y eventos de historia.
+* **CSS3 Avanzado:** Diseño de interfaces inmersivas estilo chat y novela visual.
