@@ -1,13 +1,20 @@
-# EcoCity 🌍♻️
+# 🌍 Ecocity (Juego 02)
 
-**EcoCity** es una aventura de exploración en 3D que busca concienciar sobre el medio ambiente, donde acompañas a Rock el capibara a través de una ciudad sostenible.
+¡Bienvenido al repositorio de **Ecocity**! Un videojuego de simulación 3D desarrollado como parte de mi portafolio de Game Development.
 
-## 🌟 Características
-- **Exploración 3D:** Un entorno tridimensional completo que el jugador puede recorrer libremente.
-- **Interacciones Ecológicas:** Mecánicas centradas en la recolección de basura, activación de paneles solares y cuidado de áreas verdes.
-- **Cámara Dinámica:** Sistema de seguimiento de cámara en tercera persona que acompaña al personaje.
+## 🚀 Jugar en Línea
+Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlace:
 
-## 📐 Detalles Técnicos
-- Renderizado mediante **Three.js** (WebGL).
-- Iluminación ambiental y direccional calculada en tiempo real.
-- Modelado de mallas (Meshes) y geometrías primitivas estructuradas directamente desde el código JavaScript.
+👉 **[Jugar a Ecocity en Vivo](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)**
+
+*(Nota: Recuerda cambiar `TU_USUARIO` por tu nombre de usuario real de GitHub).*
+
+---
+
+## 📌 Descripción del Proyecto
+Explora una ciudad ecológica junto a Rock, interactuando con sistemas de energía renovable en un entorno tridimensional.
+
+## 🛠️ Tecnologías y Características
+* **Three.js (WebGL):** Renderizado de entornos tridimensionales interactivos en la web.
+* **JavaScript:** Lógica de simulación y controles de exploración.
+* **CSS3:** Estilos de interfaz y HUD del juego.
