@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Game Development Portfolio - Denis Medrano Carrasco</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background">
+<div class="grid-background"></div>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+</div>
+
+<header class="navbar">
+<div class="nav-container">
+<a href="#inicio" class="logo"><span class="logo-symbol">▲</span><span>GAME<span class="yellow">DEV</span></span></a>
+<nav class="nav-menu">
+<a href="#inicio" class="nav-link active">Inicio</a>
+<a href="#juegos" class="nav-link">Juegos</a>
+<a href="#sobre-mi" class="nav-link">Sobre mí</a>
+<a href="#tecnologias" class="nav-link">Tecnologías</a>
+</nav>
+<button class="menu-button" id="menuButton"><span></span><span></span><span></span></button>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<div class="hero-badge"><span class="status-dot"></span>GAME DEVELOPMENT // PORTFOLIO</div>
+<h1>ENTER THE<br><span>GAME ZONE</span></h1>
+<p class="hero-description">Un espacio dedicado al desarrollo de videojuegos, donde cada proyecto representa una nueva experiencia, una nueva mecánica y una nueva oportunidad para crear.</p>
+<div class="hero-buttons">
+<a href="#juegos" class="btn btn-primary"><span>▶</span> EXPLORAR JUEGOS</a>
+<a href="#sobre-mi" class="btn btn-secondary">CONOCER MÁS</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><strong>06</strong><span>PROYECTOS</span></div>
+<div class="stat-separator"></div>
+<div class="stat"><strong>01</strong><span>PORTAFOLIO</span></div>
+<div class="stat-separator"></div>
+<div class="stat"><strong>∞</strong><span>CREATIVIDAD</span></div>
+</div>
+</div>
+
+<div class="hero-visual">
+<div class="game-screen">
+<div class="screen-top"><span>PLAYER_01</span><span class="online">● ONLINE</span></div>
+<div class="screen-center">
+<div class="controller">🎮</div>
+<div class="game-title">GAME</div>
+<div class="game-title yellow-text">DEVELOPER</div>
+<div class="scan-line"></div>
+<div class="loading-text">INITIALIZING EXPERIENCE...</div>
+</div>
+<div class="screen-bottom"><span>LEVEL 01</span><span>READY</span></div>
+</div>
+</div>
+</section>
+
+<section class="games-section" id="juegos">
+<div class="section-header">
+<div>
+<span class="section-tag">// SELECT YOUR GAME</span>
+<h2>MY <span>GAMES</span></h2>
+</div>
+<p>Una colección de videojuegos y prototipos desarrollados durante mi formación en Game Development.</p>
+</div>
+
+<div class="games-grid">
+
+  <!-- JUEGO 1 -->
+  <article class="game-card">
+    <div class="game-image game-image-1">
+      <div class="game-number">01</div>
+      <div class="game-icon">🎮</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 01</div>
+      <h3>MATHVENTURE</h3>
+      <p>Resuelve operaciones matemáticas a toda velocidad mientras esquivas obstáculos generados proceduralmente.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Runner 2D</span>
+        <span><b>TECNOLOGÍA</b>HTML5 / JS</span>
+      </div>
+      <a href="juego1/juego1.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+  <!-- JUEGO 2 -->
+  <article class="game-card">
+    <div class="game-image game-image-2">
+      <div class="game-number">02</div>
+      <div class="game-icon">🕹️</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 02</div>
+      <h3>ECOCITY</h3>
+      <p>Explora una ciudad ecológica junto a Rock, interactuando con sistemas de energía renovable en un entorno 3D.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Simulación 3D</span>
+        <span><b>TECNOLOGÍA</b>Three.js</span>
+      </div>
+      <a href="juego2/juego2.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+  <!-- JUEGO 3 -->
+  <article class="game-card">
+    <div class="game-image game-image-3">
+      <div class="game-number">03</div>
+      <div class="game-icon">👾</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 03</div>
+      <h3>HEALTHY STAR</h3>
+      <p>Guía a Estrellita en la oscuridad; tu nivel de nutrición determina directamente tu radio de visión en el laberinto.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Laberinto 2D</span>
+        <span><b>TECNOLOGÍA</b>Canvas API</span>
+      </div>
+      <a href="juego3/juego3.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+  <!-- JUEGO 4 -->
+  <article class="game-card">
+    <div class="game-image game-image-4">
+      <div class="game-number">04</div>
+      <div class="game-icon">🚀</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 04</div>
+      <h3>HÉROE DEL AGUA</h3>
+      <p>Salva a la ciudad cerrando grifos y limpiando la contaminación en niveles de dificultad ascendente.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Arcade Top-Down</span>
+        <span><b>TECNOLOGÍA</b>JS Vainilla</span>
+      </div>
+      <a href="juego4/juego4.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+  <!-- JUEGO 5 -->
+  <article class="game-card">
+    <div class="game-image game-image-5">
+      <div class="game-number">05</div>
+      <div class="game-icon">⚡</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 05</div>
+      <h3>DETRÁS DE LA PANTALLA</h3>
+      <p>Aventura narrativa sobre el ciberbullying con un árbol de decisiones morales y mecánicas de impacto emocional.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Novela Visual</span>
+        <span><b>TECNOLOGÍA</b>HTML / CSS / JS</span>
+      </div>
+      <a href="juego5/juego5.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+  <!-- JUEGO 6 -->
+  <article class="game-card">
+    <div class="game-image game-image-6">
+      <div class="game-number">06</div>
+      <div class="game-icon">🏆</div>
+      <div class="image-glow"></div>
+    </div>
+    <div class="game-info">
+      <div class="game-category">GAME 06</div>
+      <h3>LLEGA A FIN DE MES</h3>
+      <p>Sobrevive 30 días gestionando tu sueldo, ahorros y felicidad a través de decisiones diarias en una ciudad interactiva.</p>
+      <div class="game-details">
+        <span><b>GÉNERO</b>Simulador de Vida</span>
+        <span><b>TECNOLOGÍA</b>JS Vainilla</span>
+      </div>
+      <a href="juego6/juego6.html" class="game-button">VER PROYECTO <span>→</span></a>
+    </div>
+  </article>
+
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="about-section" id="sobre-mi">
+<div class="about-content">
+<span class="section-tag">// PLAYER PROFILE</span>
+<h2>THE PLAYER<br><span>BEHIND THE GAMES</span></h2>
+<p>Soy <strong>Denis Medrano Carrasco</strong>, estudiante de Ingeniería de Sistemas, y este portafolio reúne los proyectos desarrollados durante mi formación en Game Development.</p>
+<p>Mi objetivo es experimentar con diferentes mecánicas, tecnologías web nativas y estilos de programación estructurada para crear experiencias interactivas cada vez mejores.</p>
+<div class="about-highlights">
+<div><strong>06</strong><span>JUEGOS</span></div>
+<div><strong>GAME</strong><span>DEVELOPMENT</span></div>
+<div><strong>∞</strong><span>CREATIVIDAD</span></div>
+</div>
+</div>
+
+<div class="about-decoration">
+<div class="target target-1"></div>
+<div class="target target-2"></div>
+<div class="target target-3"></div>
+<div class="target-center">⚡</div>
+</div>
+</section>
+
+<section class="technologies-section" id="tecnologias">
+<div class="section-header center">
+<span class="section-tag">// LOADOUT</span>
+<h2>MY <span>TECHNOLOGIES</span></h2>
+<p>Herramientas y tecnologías utilizadas de manera nativa durante el desarrollo de los proyectos.</p>
+</div>
+
+<div class="technology-grid">
+<div class="technology-card"><span>HTML5</span><small>WEB DEVELOPMENT</small></div>
+<div class="technology-card"><span>CSS3</span><small>UI / DESIGN</small></div>
+<div class="technology-card"><span>JAVASCRIPT</span><small>GAME LOGIC</small></div>
+<div class="technology-card"><span>GITHUB</span><small>VERSION CONTROL</small></div>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-logo"><span>▲</span> GAMEDEV</div>
+<p>GAME DEVELOPMENT PORTFOLIO - DENIS MEDRANO CARRASCO</p>
+<div class="footer-line"></div>
+<p class="copyright">© 2026 DENIS MEDRANO CARRASCO - TODOS LOS DERECHOS RESERVADOS</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

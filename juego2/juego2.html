@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EcoCity | Game 02</title>
+<link rel="stylesheet" href="juego2.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div class="background">
+<div class="grid"></div>
+<div class="glow"></div>
+</div>
+
+<header class="navbar">
+<div class="nav-container">
+<a href="../index.html" class="logo"><span>▲</span> GAME<span>DEV</span></a>
+<a href="../index.html" class="back-button">← VOLVER AL PORTAFOLIO</a>
+</div>
+</header>
+
+<main>
+
+<section class="game-hero">
+<div class="hero-content">
+<div class="game-label">GAME 02 // EDUCATIONAL GAME</div>
+<h1>ECO<span>CITY</span></h1>
+<p>Ayuda a Rock el Capibara a mantener limpia la ciudad clasificando correctamente los residuos.</p>
+
+<div class="hero-buttons">
+<a href="#jugar" class="main-button">▶ JUGAR AHORA</a>
+<a href="#informacion" class="outline-button">VER INFORMACIÓN</a>
+</div>
+</div>
+
+<div class="hero-image">
+<img src="img/portada.png" alt="Pantalla inicial de EcoCity">
+<div class="image-label">ECOCITY // ECO ADVENTURE</div>
+</div>
+</section>
+
+<section class="game-section" id="jugar">
+
+<div class="section-title">
+<span>// GAMEPLAY</span>
+<h2>JUEGA <strong>ECOCITY</strong></h2>
+<p>Recoge los residuos y llévalos al contenedor correspondiente antes de que se termine el tiempo.</p>
+</div>
+
+<div class="game-wrapper">
+
+<div id="labels-layer"></div>
+
+<div id="ui-layer">
+
+<div id="menu-main" class="panel active">
+<div class="badge">🌱 ECO ADVENTURE</div>
+<div class="game-logo">ECO<span>CITY</span></div>
+<p class="subtitle">La aventura ecológica de Rock el Capibara</p>
+
+<button class="game-button primary" onclick="G.start()">🐹 COMENZAR AVENTURA</button>
+<button class="game-button" onclick="U.show('menu-rules')">📖 CÓMO JUGAR</button>
+<button class="game-button" onclick="U.showScores()">🏆 MEJORES PUNTAJES</button>
+</div>
+
+<div id="menu-rules" class="panel">
+
+<div class="badge">♻️ RECICLAJE</div>
+<h2>CÓMO JUGAR</h2>
+
+<div class="rules">
+
+<div class="rule">
+<span class="color-dot plastic"></span>
+<span>🟡 Plástico</span>
+</div>
+
+<div class="rule">
+<span class="color-dot paper"></span>
+<span>🔵 Papel / Cartón</span>
+</div>
+
+<div class="rule">
+<span class="color-dot glass"></span>
+<span>🟢 Vidrio</span>
+</div>
+
+<div class="rule">
+<span class="color-dot organic"></span>
+<span>🟤 Orgánico</span>
+</div>
+
+</div>
+
+<p>Encuentra los residuos, recógelos y llévalos al contenedor correcto.</p>
+<p>Cada clasificación correcta otorga <strong>+15 puntos</strong> y recupera tiempo.</p>
+<p>Un error resta <strong>5 segundos</strong>.</p>
+
+<div class="controls-box">
+<span>↑ ↓</span> MOVER
+<span>← →</span> GIRAR
+<span>SPACE</span> SALTAR
+</div>
+
+<button class="game-button" onclick="U.show('menu-main')">← VOLVER</button>
+</div>
+
+<div id="menu-scores" class="panel">
+
+<div class="badge">🏆 HALL OF FAME</div>
+<h2>MEJORES PUNTAJES</h2>
+
+<div id="score-list"></div>
+
+<button class="game-button" onclick="U.show('menu-main')">← VOLVER</button>
+</div>
+
+<div id="menu-end" class="panel">
+
+<div class="badge">✨ AVENTURA TERMINADA</div>
+
+<h2 id="end-title">¡TIEMPO AGOTADO!</h2>
+
+<p>Nivel alcanzado:</p>
+<strong id="end-lvl" class="result-number"></strong>
+
+<p>Puntuación:</p>
+<strong id="end-score" class="result-number"></strong>
+
+<button class="game-button primary" onclick="G.start()">🔄 JUGAR OTRA VEZ</button>
+<button class="game-button" onclick="U.show('menu-main')">MENÚ PRINCIPAL</button>
+
+</div>
+
+</div>
+
+<div id="hud">
+
+<div class="hud-box time-box">
+
+<div class="hud-title">
+NIVEL
+<span class="speed">⚡ <span id="hud-spd">1.0</span>x</span>
+</div>
+
+<div class="level-number">
+<span id="hud-lvl">1</span>
+</div>
+
+<div id="time-bar-bg">
+<div id="time-fill"></div>
+</div>
+
+</div>
+
+<div class="hud-box points-box">
+
+<div class="points-label">PUNTOS</div>
+<strong id="hud-pts">0</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="game-note">
+<span>CONTROLES:</span>
+↑ ↓ MOVER &nbsp; • &nbsp; ← → GIRAR &nbsp; • &nbsp; SPACE SALTAR
+</div>
+
+</div>
+
+</section>
+
+<section class="game-info-section" id="informacion">
+
+<div class="section-title">
+<span>// GAME DATABASE</span>
+<h2>SOBRE <strong>ECOCITY</strong></h2>
+</div>
+
+<div class="description-box">
+
+<div class="box-number">02</div>
+
+<div>
+<h3>¿QUÉ ES ECOCITY?</h3>
+
+<p>EcoCity es un videojuego educativo en el que el jugador controla a Rock el Capibara, quien debe recorrer diferentes escenarios, encontrar residuos y colocarlos en el contenedor correspondiente. El juego busca enseñar de manera interactiva la importancia de separar correctamente la basura y fomentar hábitos de reciclaje.</p>
+</div>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card">
+<div class="card-icon">🎯</div>
+<h3>OBJETIVO</h3>
+<p>Recoger los diferentes tipos de residuos y clasificarlos correctamente en sus contenedores antes de que se termine el tiempo.</p>
+</div>
+
+<div class="info-card">
+<div class="card-icon">♻️</div>
+<h3>CLASIFICACIÓN</h3>
+
+<div class="waste-list">
+<div><span class="dot plastic"></span>Plástico</div>
+<div><span class="dot paper"></span>Papel / Cartón</div>
+<div><span class="dot glass"></span>Vidrio</div>
+<div><span class="dot organic"></span>Orgánico</div>
+</div>
+
+</div>
+
+<div class="info-card">
+<div class="card-icon">🕹️</div>
+<h3>CONTROLES</h3>
+
+<div class="key-grid">
+<div><span>↑</span> Avanzar</div>
+<div><span>↓</span> Retroceder</div>
+<div><span>←</span> Girar izquierda</div>
+<div><span>→</span> Girar derecha</div>
+<div><span>SPACE</span> Saltar</div>
+</div>
+
+</div>
+
+<div class="info-card">
+<div class="card-icon">⭐</div>
+<h3>SISTEMA DE PUNTOS</h3>
+
+<p>Cada residuo colocado correctamente otorga:</p>
+
+<div class="points-big">+15</div>
+
+<p>Además, una clasificación correcta recupera 3 segundos. Si el residuo se coloca en el contenedor incorrecto, se pierden 5 segundos.</p>
+</div>
+
+</div>
+
+<div class="levels-section">
+
+<div class="section-title">
+<span>// ENVIRONMENT SYSTEM</span>
+<h2>EXPLORA LOS <strong>ESCENARIOS</strong></h2>
+</div>
+
+<div class="levels-grid">
+
+<div class="level-card">
+<div class="level-number">01</div>
+<div>
+<span>ESCENARIO 01</span>
+<h3>CIUDAD VERDE</h3>
+<p>Explora un entorno natural rodeado de árboles mientras clasificas los residuos.</p>
+</div>
+</div>
+
+<div class="level-card">
+<div class="level-number">02</div>
+<div>
+<span>ESCENARIO 02</span>
+<h3>ISLAS</h3>
+<p>Continúa la aventura sobre el agua utilizando un bote para desplazarte entre las islas.</p>
+</div>
+</div>
+
+<div class="level-card">
+<div class="level-number">03+</div>
+<div>
+<span>ESCENARIO 03</span>
+<h3>ZONA NOCTURNA</h3>
+<p>La aventura continúa en un ambiente más oscuro y desafiante.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="education-section">
+
+<div class="education-box">
+
+<div class="education-icon">🌎</div>
+
+<div>
+<span>// EDUCATIONAL PURPOSE</span>
+<h2>APRENDER <strong>RECICLANDO</strong></h2>
+
+<p>EcoCity convierte la clasificación de residuos en una actividad interactiva. El estudiante debe reconocer cada tipo de residuo y relacionarlo con su contenedor correspondiente mientras explora el escenario y administra el tiempo disponible.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="gallery-section">
+
+<div class="section-title">
+<span>// VISUAL DATABASE</span>
+<h2>GALERÍA DEL <strong>JUEGO</strong></h2>
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item large">
+<img src="img/portada.png" alt="Pantalla inicial de EcoCity">
+<div class="gallery-caption">01 // PANTALLA INICIAL</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/gameplay.png" alt="Gameplay de EcoCity">
+<div class="gallery-caption">02 // GAMEPLAY</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/reciclaje.png" alt="Clasificación de residuos">
+<div class="gallery-caption">03 // RECICLAJE</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="technologies">
+
+<div class="section-title">
+<span>// DEVELOPMENT LOADOUT</span>
+<h2>TECNOLOGÍAS <strong>UTILIZADAS</strong></h2>
+</div>
+
+<div class="technology-list">
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JAVASCRIPT</div>
+<div>THREE.JS</div>
+<div>WEBGL</div>
+<div>LOCALSTORAGE</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="final-cta">
+
+<span>// READY PLAYER?</span>
+
+<h2>¿LISTO PARA <strong>RECICLAR</strong>?</h2>
+
+<a href="#jugar" class="main-button">▶ JUGAR ECOCITY</a>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer-logo">▲ GAME<span>DEV</span></div>
+
+<p>ECOCITY // EDUCATIONAL GAME</p>
+
+<a href="../index.html">← VOLVER AL PORTAFOLIO</a>
+
+</footer>
+
+<script src="juego2.js"></script>
+
+</body>
+</html>

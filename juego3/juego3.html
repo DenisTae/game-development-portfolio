@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Healthy Star | Game 03</title>
+<link rel="stylesheet" href="juego3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background">
+<div class="grid"></div>
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+</div>
+
+<header class="navbar">
+<div class="nav-container">
+<a href="../index.html" class="logo"><span>★</span> GAME<span>DEV</span></a>
+<a href="../index.html" class="back-button">← VOLVER AL PORTAFOLIO</a>
+</div>
+</header>
+
+<main>
+
+<section class="game-hero">
+
+<div class="hero-content">
+
+<div class="game-label">GAME 03 // EDUCATIONAL GAME</div>
+
+<h1>HEALTHY<span>STAR</span></h1>
+
+<p>
+Ayuda a Estrellita a encontrar alimentos saludables, superar los laberintos y completar todos los niveles.
+</p>
+
+<div class="hero-buttons">
+<a href="#jugar" class="main-button">▶ JUGAR AHORA</a>
+<a href="#informacion" class="outline-button">VER INFORMACIÓN</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="img/portada.png" alt="Pantalla principal de Healthy Star">
+<div class="image-label">HEALTHY STAR // READY</div>
+</div>
+
+</section>
+
+<section class="game-section" id="jugar">
+
+<div class="section-title">
+<span>// GAMEPLAY</span>
+<h2>JUEGA <strong>HEALTHY STAR</strong></h2>
+<p>
+Encuentra todos los alimentos saludables antes de que se termine el tiempo.
+</p>
+</div>
+
+<div class="game-wrapper">
+
+<div class="game-container">
+
+<h1>⭐ Healthy Star</h1>
+
+<div class="subtitle">
+¡Ayuda a Estrellita a elegir alimentos saludables!
+</div>
+
+<div id="hud">
+
+<div class="stat" id="levelText">
+🌟 Nivel 1
+</div>
+
+<div class="stat" id="healthyText">
+🍎 Saludables: 0/0
+</div>
+
+<div class="stat" id="timerText">
+⏱️ 00:00
+</div>
+
+<div class="stat">
+👁️ Visión: <span id="visionText">1</span>
+</div>
+
+</div>
+
+<div id="gameArea">
+
+<canvas id="canvas"></canvas>
+
+<div id="toast"></div>
+
+<div id="messageScreen">
+
+<div class="starBig">
+⭐
+</div>
+
+<div id="messageTitle">
+Nivel 1
+</div>
+
+<div id="message">
+Comer saludable ayuda a nuestro cuerpo a tener energía para jugar, estudiar y crecer.
+</div>
+
+<button id="startButton">
+¡JUGAR! ⭐
+</button>
+
+</div>
+
+<div id="endScreen">
+
+<div id="endIcon">
+🏆
+</div>
+
+<div id="endTitle">
+¡Victoria!
+</div>
+
+<div id="endText"></div>
+
+<button id="restartButton">
+Jugar otra vez
+</button>
+
+</div>
+
+</div>
+
+<div id="controls">
+
+<div id="controlPad">
+
+<button class="controlButton up" data-key="ArrowUp">▲</button>
+<button class="controlButton left" data-key="ArrowLeft">◀</button>
+<button class="controlButton down" data-key="ArrowDown">▼</button>
+<button class="controlButton right" data-key="ArrowRight">▶</button>
+
+</div>
+
+</div>
+
+<p class="control-description">
+Usa las flechas del teclado o los botones para moverte.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="game-info-section" id="informacion">
+
+<div class="section-title">
+<span>// GAME DATABASE</span>
+<h2>SOBRE EL <strong>JUEGO</strong></h2>
+</div>
+
+<div class="description-box">
+
+<div class="box-number">
+03
+</div>
+
+<div>
+
+<h3>¿QUÉ ES HEALTHY STAR?</h3>
+
+<p>
+Healthy Star es un videojuego educativo en el que el jugador controla a Estrellita dentro de diferentes laberintos. El objetivo es encontrar y consumir todos los alimentos saludables antes de que se termine el tiempo. Durante la aventura también aparecen alimentos poco saludables que pueden afectar negativamente la visión y la puntuación.
+</p>
+
+</div>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="card-icon">
+🎯
+</div>
+
+<h3>OBJETIVO</h3>
+
+<p>
+Encontrar todos los alimentos saludables de cada nivel antes de que termine el tiempo.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="card-icon">
+📜
+</div>
+
+<h3>REGLAS</h3>
+
+<ul>
+<li>Controlar a Estrellita por el laberinto.</li>
+<li>Encontrar todos los alimentos saludables.</li>
+<li>Evitar los alimentos poco saludables.</li>
+<li>Los alimentos saludables aumentan la visión.</li>
+<li>Los alimentos poco saludables reducen la visión.</li>
+<li>Completar los cinco niveles.</li>
+<li>Superar cada nivel antes de que termine el tiempo.</li>
+</ul>
+
+</div>
+
+<div class="info-card">
+
+<div class="card-icon">
+🕹️
+</div>
+
+<h3>CONTROLES</h3>
+
+<p class="control-key">
+↑ ↓ ← →
+</p>
+
+<p>
+Utiliza las flechas del teclado para mover a Estrellita. También puedes utilizar los botones de dirección que aparecen debajo del juego.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="card-icon">
+👁️
+</div>
+
+<h3>SISTEMA DE VISIÓN</h3>
+
+<p>
+Cada nivel comienza con un radio de visión determinado. Al encontrar alimentos saludables la visión aumenta. Al recoger alimentos poco saludables la visión disminuye.
+</p>
+
+</div>
+
+</div>
+
+<div class="levels-section">
+
+<div class="levels-title">
+<span>// PROGRESSION SYSTEM</span>
+<h2>LOS <strong>5 NIVELES</strong></h2>
+</div>
+
+<div class="levels-grid">
+
+<div class="level-card">
+
+<div class="level-number">
+01
+</div>
+
+<div class="level-content">
+
+<span>NIVEL 01</span>
+
+<h3>FRUTAS Y VERDURAS</h3>
+
+<p>
+Las frutas y verduras aportan vitaminas y nutrientes que ayudan a nuestro cuerpo.
+</p>
+
+</div>
+
+</div>
+
+<div class="level-card">
+
+<div class="level-number">
+02
+</div>
+
+<div class="level-content">
+
+<span>NIVEL 02</span>
+
+<h3>HIDRATACIÓN</h3>
+
+<p>
+Aprende la importancia de mantener nuestro cuerpo hidratado durante el día.
+</p>
+
+</div>
+
+</div>
+
+<div class="level-card">
+
+<div class="level-number">
+03
+</div>
+
+<div class="level-content">
+
+<span>NIVEL 03</span>
+
+<h3>ALIMENTACIÓN VARIADA</h3>
+
+<p>
+Descubre la importancia de consumir diferentes tipos de alimentos.
+</p>
+
+</div>
+
+</div>
+
+<div class="level-card">
+
+<div class="level-number">
+04
+</div>
+
+<div class="level-content">
+
+<span>NIVEL 04</span>
+
+<h3>MEJORES ELECCIONES</h3>
+
+<p>
+Aprende a diferenciar opciones nutritivas de alimentos con demasiado azúcar.
+</p>
+
+</div>
+
+</div>
+
+<div class="level-card level-final">
+
+<div class="level-number">
+05
+</div>
+
+<div class="level-content">
+
+<span>NIVEL 05 // FINAL</span>
+
+<h3>HEALTHY STAR</h3>
+
+<p>
+Supera el reto final y demuestra todo lo aprendido durante la aventura.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="characters-section">
+
+<div class="section-title">
+<span>// PLAYER PROFILE</span>
+<h2>CONOCE A <strong>ESTRELLITA</strong></h2>
+</div>
+
+<div class="characters-grid">
+
+<div class="character-card">
+
+<div class="character-image">
+⭐
+</div>
+
+<h3>ESTRELLITA</h3>
+
+<p>
+La protagonista de Healthy Star. Debe recorrer los laberintos y tomar buenas decisiones alimentarias.
+</p>
+
+</div>
+
+<div class="character-card">
+
+<div class="character-image food-icon">
+🍎
+</div>
+
+<h3>ALIMENTOS</h3>
+
+<p>
+Los alimentos saludables ayudan a aumentar la visión, mientras que los alimentos poco saludables reducen la visión.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="gallery-section">
+
+<div class="section-title">
+<span>// VISUAL DATABASE</span>
+<h2>GALERÍA DEL <strong>JUEGO</strong></h2>
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item large">
+<img src="img/portada.png" alt="Portada de Healthy Star">
+<div class="gallery-caption">
+01 // PANTALLA INICIAL
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/gameplay.png" alt="Gameplay de Healthy Star">
+<div class="gallery-caption">
+02 // GAMEPLAY
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/nivel.png" alt="Nivel de Healthy Star">
+<div class="gallery-caption">
+03 // NIVEL
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="technologies">
+
+<div class="section-title">
+<span>// DEVELOPMENT LOADOUT</span>
+<h2>TECNOLOGÍAS <strong>UTILIZADAS</strong></h2>
+</div>
+
+<div class="technology-list">
+
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JAVASCRIPT</div>
+<div>CANVAS API</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="final-cta">
+
+<span>// READY PLAYER?</span>
+
+<h2>
+¿LISTO PARA <strong>HEALTHY STAR</strong>?
+</h2>
+
+<a href="#jugar" class="main-button">
+▶ JUGAR HEALTHY STAR
+</a>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer-logo">
+★ GAME<span>DEV</span>
+</div>
+
+<p>
+HEALTHY STAR // EDUCATIONAL GAME
+</p>
+
+<a href="../index.html">
+← VOLVER AL PORTAFOLIO
+</a>
+
+</footer>
+
+<script src="juego3.js"></script>
+
+</body>
+</html>

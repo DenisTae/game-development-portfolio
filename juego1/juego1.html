@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MathVenture | Game 01</title>
+<link rel="stylesheet" href="juego1.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background">
+<div class="grid"></div>
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+</div>
+
+<header class="navbar">
+<div class="nav-container">
+<a href="../index.html" class="logo"><span>▲</span> GAME<span>DEV</span></a>
+<a href="../index.html" class="back-button">← VOLVER AL PORTAFOLIO</a>
+</div>
+</header>
+
+<main>
+
+<section class="game-hero">
+<div class="hero-content">
+<div class="game-label">GAME 01 // EDUCATIONAL GAME</div>
+<h1>MATH<span>VENTURE</span></h1>
+<p>Aprende matemáticas mientras corres, saltas y superas desafíos.</p>
+<div class="hero-buttons">
+<a href="#jugar" class="main-button">▶ JUGAR AHORA</a>
+<a href="#informacion" class="outline-button">VER INFORMACIÓN</a>
+</div>
+</div>
+
+<div class="hero-image">
+<img src="img/portada.png" alt="Pantalla principal de MathVenture">
+<div class="image-label">MATHVENTURE // READY</div>
+</div>
+</section>
+
+<section class="game-section" id="jugar">
+<div class="section-title">
+<span>// GAMEPLAY</span>
+<h2>JUEGA <strong>MATHVENTURE</strong></h2>
+<p>Resuelve los desafíos matemáticos y completa los tres niveles.</p>
+</div>
+
+<div class="game-wrapper">
+<div class="speed-container">
+<span class="speed-label">⚡ VELOCIDAD</span>
+<div class="speed-bar-bg">
+<div id="speed-fill" class="speed-bar-fill"></div>
+</div>
+<span id="speed-text" class="speed-label">Lento</span>
+</div>
+
+<div class="canvas-wrapper">
+<canvas id="gameCanvas" width="800" height="400"></canvas>
+
+<div id="start-screen" class="ui-overlay">
+<div class="overlay-tag">MATHVENTURE // START</div>
+<h2>¡PREPÁRATE!</h2>
+<p>Selecciona tu personaje</p>
+
+<div class="char-select">
+<button class="char-btn selected" id="btn-cat">🐱 <span>GATO</span></button>
+<button class="char-btn" id="btn-dog">🐶 <span>PERRO</span></button>
+</div>
+
+<p class="control-info">ESPACIO <span>PARA SALTAR</span></p>
+
+<button id="start-btn" class="game-start-button">INICIAR JUEGO</button>
+</div>
+
+<div id="math-screen" class="ui-overlay hidden">
+<div class="overlay-tag">⚠ OBSTÁCULO DETECTADO</div>
+<h2>RESUELVE EL DESAFÍO</h2>
+<p>Responde correctamente para continuar.</p>
+<h1 id="math-question"></h1>
+
+<form id="math-form">
+<input type="number" id="math-answer" required autocomplete="off">
+<button type="submit" id="math-submit" class="game-start-button">RESPONDER</button>
+</form>
+
+<div id="math-feedback"></div>
+</div>
+
+<div id="win-screen" class="ui-overlay hidden">
+<div class="overlay-tag">LEVEL COMPLETE</div>
+<h2 id="win-title">¡BIEN HECHO!</h2>
+<p id="win-msg"></p>
+<button id="next-btn" class="game-start-button">SIGUIENTE NIVEL</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="game-info-section" id="informacion">
+
+<div class="section-title">
+<span>// GAME DATABASE</span>
+<h2>SOBRE EL <strong>JUEGO</strong></h2>
+</div>
+
+<div class="description-box">
+<div class="box-number">01</div>
+<div>
+<h3>¿QUÉ ES MATHVENTURE?</h3>
+<p>MathVenture es un videojuego educativo diseñado para que los estudiantes practiquen operaciones matemáticas mientras superan obstáculos. El jugador controla un personaje que debe avanzar por el escenario y resolver correctamente los problemas matemáticos que aparecen durante la partida.</p>
+</div>
+</div>
+
+<div class="info-grid">
+
+<div class="info-card">
+<div class="card-icon">🎯</div>
+<h3>OBJETIVO</h3>
+<p>Resolver correctamente los problemas matemáticos y completar los tres niveles del juego.</p>
+</div>
+
+<div class="info-card">
+<div class="card-icon">📜</div>
+<h3>REGLAS</h3>
+<ul>
+<li>Seleccionar un personaje.</li>
+<li>Utilizar la barra Espaciadora para saltar.</li>
+<li>Evitar los obstáculos.</li>
+<li>Resolver las preguntas matemáticas.</li>
+<li>Cada nivel requiere 5 respuestas correctas.</li>
+<li>Una respuesta incorrecta debe intentarse nuevamente.</li>
+</ul>
+</div>
+
+<div class="info-card">
+<div class="card-icon">🕹️</div>
+<h3>CONTROLES</h3>
+<p class="control-key">SPACE</p>
+<p>Utiliza la barra Espaciadora para hacer saltar al personaje y evitar los obstáculos.</p>
+</div>
+
+<div class="info-card">
+<div class="card-icon">⚙️</div>
+<h3>MECÁNICA</h3>
+<p>El jugador avanza mientras aparecen obstáculos. Al producirse una colisión, se genera un problema matemático que debe ser resuelto para continuar.</p>
+</div>
+
+</div>
+
+<div class="levels-section">
+<div class="levels-title">
+<span>// PROGRESSION SYSTEM</span>
+<h2>LOS <strong>3 NIVELES</strong></h2>
+</div>
+
+<div class="levels-grid">
+
+<div class="level-card level-one">
+<div class="level-number">01</div>
+<div class="level-content">
+<span>NIVEL 01</span>
+<h3>SUMAS Y RESTAS</h3>
+<p>Practica operaciones básicas de suma y resta.</p>
+</div>
+</div>
+
+<div class="level-card level-two">
+<div class="level-number">02</div>
+<div class="level-content">
+<span>NIVEL 02</span>
+<h3>MULTIPLICACIÓN</h3>
+<p>Resuelve operaciones de multiplicación para continuar.</p>
+</div>
+</div>
+
+<div class="level-card level-three">
+<div class="level-number">03</div>
+<div class="level-content">
+<span>NIVEL 03</span>
+<h3>INCÓGNITAS</h3>
+<p>Encuentra el valor de X mediante problemas de multiplicación.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="characters-section">
+<div class="section-title">
+<span>// PLAYER SELECT</span>
+<h2>ELIGE TU <strong>PERSONAJE</strong></h2>
+</div>
+
+<div class="characters-grid">
+<div class="character-card">
+<div class="character-image">🐱</div>
+<h3>GATO</h3>
+<p>Personaje disponible para comenzar la aventura.</p>
+</div>
+
+<div class="character-card">
+<div class="character-image">🐶</div>
+<h3>PERRO</h3>
+<p>Segundo personaje disponible para jugar.</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-section">
+<div class="section-title">
+<span>// VISUAL DATABASE</span>
+<h2>GALERÍA DEL <strong>JUEGO</strong></h2>
+</div>
+
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img src="img/portada.png" alt="Portada de MathVenture">
+<div class="gallery-caption">01 // PANTALLA INICIAL</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/gameplay.png" alt="Gameplay de MathVenture">
+<div class="gallery-caption">02 // GAMEPLAY</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/pregunta.png" alt="Pregunta matemática de MathVenture">
+<div class="gallery-caption">03 // DESAFÍO MATEMÁTICO</div>
+</div>
+</div>
+</div>
+
+<div class="technologies">
+<div class="section-title">
+<span>// DEVELOPMENT LOADOUT</span>
+<h2>TECNOLOGÍAS <strong>UTILIZADAS</strong></h2>
+</div>
+
+<div class="technology-list">
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JAVASCRIPT</div>
+<div>CANVAS API</div>
+</div>
+</div>
+
+</section>
+
+<section class="final-cta">
+<span>// READY PLAYER?</span>
+<h2>¿LISTO PARA <strong>APRENDER</strong>?</h2>
+<a href="#jugar" class="main-button">▶ JUGAR MATHVENTURE</a>
+</section>
+
+</main>
+
+<footer>
+<div class="footer-logo">▲ GAME<span>DEV</span></div>
+<p>MATHVENTURE // EDUCATIONAL GAME</p>
+<a href="../index.html">← VOLVER AL PORTAFOLIO</a>
+</footer>
+
+<script src="juego1.js"></script>
+</body>
+</html>

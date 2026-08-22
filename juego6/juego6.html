@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Llega a Fin de Mes | Game 06</title>
+
+<link rel="stylesheet" href="juego6.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background">
+    <div class="grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+</div>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+            <span>▲</span> GAME<span>DEV</span>
+        </a>
+
+        <a href="../index.html" class="back-button">
+            ← VOLVER AL PORTAFOLIO
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="game-hero">
+
+    <div class="hero-content">
+
+        <div class="game-label">
+            GAME 06 // FINANCIAL EDUCATIONAL GAME
+        </div>
+
+        <h1>
+            LLEGA A <span>FIN DE MES</span>
+        </h1>
+
+        <p>
+            Administra tu dinero, toma buenas decisiones y sobrevive hasta el día 30.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#jugar" class="main-button">
+                ▶ JUGAR AHORA
+            </a>
+
+            <a href="#informacion" class="outline-button">
+                VER INFORMACIÓN
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="img/portada.png"
+            alt="Pantalla principal de Llega a Fin de Mes"
+        >
+
+        <div class="image-label">
+            LLEGA A FIN DE MES // READY
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GAMEPLAY
+========================= -->
+
+<section class="game-section" id="jugar">
+
+    <div class="section-title">
+
+        <span>// GAMEPLAY</span>
+
+        <h2>
+            JUEGA <strong>LLEGA A FIN DE MES</strong>
+        </h2>
+
+        <p>
+            Recorre el mes, toma decisiones financieras y llega al día 30 sin quedarte sin dinero.
+        </p>
+
+    </div>
+
+
+    <div class="game-wrapper">
+
+        <!-- HUD -->
+
+        <div class="game-hud">
+
+            <div class="hud-item">
+                <span>💵 DINERO</span>
+                <strong id="money">$800</strong>
+            </div>
+
+            <div class="hud-item">
+                <span>🐷 AHORRO</span>
+                <strong id="saving">$0</strong>
+            </div>
+
+            <div class="hud-item happiness-hud">
+
+                <span>😊 FELICIDAD</span>
+
+                <strong id="happiness">
+                    100%
+                </strong>
+
+                <div class="happiness-bar">
+                    <i id="happyBar"></i>
+                </div>
+
+            </div>
+
+            <div class="hud-day">
+
+                <span>DÍA</span>
+
+                <strong id="day">
+                    1
+                </strong>
+
+                <small>
+                    / 30
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- JUEGO -->
+
+        <div class="canvas-wrapper">
+
+            <div id="game-world">
+
+                <div class="game-sky">
+
+                    <div class="game-sun">
+                        ☀️
+                    </div>
+
+                    <div class="game-cloud cloud-one">
+                        ☁️
+                    </div>
+
+                    <div class="game-cloud cloud-two">
+                        ☁️
+                    </div>
+
+                    <div class="game-cloud cloud-three">
+                        ☁️
+                    </div>
+
+                </div>
+
+
+                <div class="game-city">
+
+                    <div class="building building-one"></div>
+                    <div class="building building-two"></div>
+                    <div class="building building-three"></div>
+                    <div class="building building-four"></div>
+                    <div class="building building-five"></div>
+
+                </div>
+
+
+                <div class="street-store">
+                    🏪
+                </div>
+
+                <div class="street-bus">
+                    🚏
+                </div>
+
+                <div class="street-tree tree-one">
+                    🌳
+                </div>
+
+                <div class="street-tree tree-two">
+                    🌳
+                </div>
+
+
+                <!-- CARRETERA -->
+
+                <div class="road road-h1"></div>
+                <div class="road road-v1"></div>
+
+                <div class="road road-h2"></div>
+                <div class="road road-v2"></div>
+
+                <div class="road road-h3"></div>
+                <div class="road road-v3"></div>
+
+                <div class="road road-h4"></div>
+                <div class="road road-v4"></div>
+
+                <div class="road road-h5"></div>
+
+
+                <!-- PUNTOS -->
+
+                <div class="checkpoint checkpoint-one">
+                    1
+                </div>
+
+                <div class="checkpoint checkpoint-two">
+                    2
+                </div>
+
+                <div class="checkpoint checkpoint-three">
+                    3
+                </div>
+
+                <div class="checkpoint checkpoint-four">
+                    4
+                </div>
+
+                <div class="checkpoint checkpoint-five">
+                    🏁
+                </div>
+
+
+                <!-- PERSONAJE -->
+
+                <div id="character" class="player">
+
+                    <div class="player-shadow"></div>
+
+                    <div class="player-hair"></div>
+
+                    <div class="player-head">
+
+                        <span class="player-eye eye-left"></span>
+
+                        <span class="player-eye eye-right"></span>
+
+                        <span class="player-mouth"></span>
+
+                    </div>
+
+                    <div class="player-neck"></div>
+
+                    <div class="player-body">
+
+                        <span>
+                            ★
+                        </span>
+
+                    </div>
+
+                    <div class="player-arm arm-left"></div>
+
+                    <div class="player-arm arm-right"></div>
+
+                    <div class="player-leg leg-left"></div>
+
+                    <div class="player-leg leg-right"></div>
+
+                    <div class="player-shoe shoe-left"></div>
+
+                    <div class="player-shoe shoe-right"></div>
+
+                    <div class="player-bag"></div>
+
+                </div>
+
+
+                <div class="start-label">
+                    🏠 INICIO
+                </div>
+
+                <div class="finish-label">
+                    🏁 META
+                </div>
+
+
+                <div class="controls">
+                    WASD / FLECHAS PARA CAMINAR
+                </div>
+
+            </div>
+
+
+            <!-- PANTALLA INICIAL -->
+
+            <div id="start-screen" class="ui-overlay">
+
+                <div class="overlay-tag">
+                    FIN DE MES // START
+                </div>
+
+                <h2>
+                    ¡ADMINISTRA TU MES!
+                </h2>
+
+                <p>
+                    Comienzas con $800. Tu objetivo es llegar al día 30.
+                </p>
+
+                <div class="start-money">
+                    💵 $800
+                </div>
+
+                <div class="start-rules">
+
+                    <div>
+                        💰
+                        <span>
+                            Administra tu dinero
+                        </span>
+                    </div>
+
+                    <div>
+                        🐷
+                        <span>
+                            Intenta ahorrar
+                        </span>
+                    </div>
+
+                    <div>
+                        😊
+                        <span>
+                            Cuida tu felicidad
+                        </span>
+                    </div>
+
+                </div>
+
+                <p class="control-info">
+                    WASD / FLECHAS
+                    <span>
+                        PARA MOVERTE
+                    </span>
+                </p>
+
+                <button
+                    id="start-btn"
+                    class="game-start-button"
+                >
+                    INICIAR JUEGO
+                </button>
+
+            </div>
+
+
+            <!-- DECISIÓN -->
+
+            <div id="decision-screen" class="ui-overlay hidden">
+
+                <div class="overlay-tag">
+                    ⚠ DECISIÓN FINANCIERA
+                </div>
+
+                <div
+                    id="decision-icon"
+                    class="decision-icon"
+                >
+                    💰
+                </div>
+
+                <h2 id="decision-title">
+                    DECISIÓN
+                </h2>
+
+                <p id="decision-text">
+                    ¿Qué quieres hacer?
+                </p>
+
+                <div
+                    id="decision-options"
+                    class="decision-options"
+                ></div>
+
+            </div>
+
+
+            <!-- EVENTO -->
+
+            <div id="event-screen" class="ui-overlay hidden">
+
+                <div class="overlay-tag">
+                    ⚡ EVENTO EN EL CAMINO
+                </div>
+
+                <div
+                    id="event-icon"
+                    class="decision-icon"
+                >
+                    ⚡
+                </div>
+
+                <h2 id="event-title">
+                    EVENTO
+                </h2>
+
+                <p id="event-text">
+                    Algo ocurrió durante tu camino.
+                </p>
+
+                <div
+                    id="event-options"
+                    class="decision-options"
+                ></div>
+
+            </div>
+
+
+            <!-- FIN -->
+
+            <div id="win-screen" class="ui-overlay hidden">
+
+                <div class="overlay-tag">
+                    MONTH COMPLETE
+                </div>
+
+                <div class="big-result">
+                    🏆
+                </div>
+
+                <h2 id="win-title">
+                    ¡LLEGASTE A FIN DE MES!
+                </h2>
+
+                <p id="win-message">
+                    Lograste completar los 30 días.
+                </p>
+
+                <div class="result-mini-stats">
+
+                    <div>
+                        💵
+                        <strong id="game-final-money">
+                            $0
+                        </strong>
+                    </div>
+
+                    <div>
+                        🐷
+                        <strong id="game-final-saving">
+                            $0
+                        </strong>
+                    </div>
+
+                    <div>
+                        😊
+                        <strong id="game-final-happiness">
+                            0%
+                        </strong>
+                    </div>
+
+                </div>
+
+                <button
+                    id="restart-game-btn"
+                    class="game-start-button"
+                >
+                    JUGAR DE NUEVO
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMACIÓN DEL DÍA -->
+
+        <div class="daily-panel">
+
+            <div class="time-display">
+
+                <span id="time-icon">
+                    ☀️
+                </span>
+
+                <strong id="time-text">
+                    7:30 AM
+                </strong>
+
+            </div>
+
+
+            <div class="decision-title-small">
+                DECISIONES DEL DÍA
+            </div>
+
+
+            <div
+                id="decision-progress"
+                class="decision-progress"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <p id="status">
+                🚶 Sal de casa y llega a tu primera esquina.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INFORMACIÓN
+========================= -->
+
+<section
+    class="game-info-section"
+    id="informacion"
+>
+
+    <div class="section-title">
+
+        <span>
+            // GAME DATABASE
+        </span>
+
+        <h2>
+            SOBRE EL <strong>JUEGO</strong>
+        </h2>
+
+    </div>
+
+
+    <div class="description-box">
+
+        <div class="box-number">
+            01
+        </div>
+
+        <div>
+
+            <h3>
+                ¿QUÉ ES LLEGA A FIN DE MES?
+            </h3>
+
+            <p>
+                Llega a Fin de Mes es un videojuego educativo enfocado en la administración del dinero. El jugador comienza el mes con una cantidad determinada de dinero y debe tomar decisiones relacionadas con gastos, ahorro, trabajo y bienestar para conseguir llegar al día 30.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🎯
+            </div>
+
+            <h3>
+                OBJETIVO
+            </h3>
+
+            <p>
+                Llegar al día 30 administrando correctamente el dinero, evitando quedarse sin recursos y tratando de mantener un buen nivel de felicidad.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                📜
+            </div>
+
+            <h3>
+                REGLAS
+            </h3>
+
+            <ul>
+
+                <li>
+                    Comienzas con $800.
+                </li>
+
+                <li>
+                    Debes avanzar por el mapa.
+                </li>
+
+                <li>
+                    Cada esquina presenta una decisión.
+                </li>
+
+                <li>
+                    Puedes gastar, trabajar o ahorrar.
+                </li>
+
+                <li>
+                    Los eventos pueden aparecer durante el camino.
+                </li>
+
+                <li>
+                    Debes llegar al día 30.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🕹️
+            </div>
+
+            <h3>
+                CONTROLES
+            </h3>
+
+            <p class="control-key">
+                WASD
+            </p>
+
+            <p class="control-key">
+                ↑ ↓ ← →
+            </p>
+
+            <p>
+                Utiliza las teclas WASD o las flechas para mover al personaje por las calles.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                MECÁNICA
+            </h3>
+
+            <p>
+                El jugador recorre un mapa con diferentes puntos de decisión. Al llegar a cada punto debe elegir entre diferentes alternativas que modifican el dinero, el ahorro o la felicidad.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROGRESIÓN -->
+
+    <div class="levels-section">
+
+        <div class="levels-title">
+
+            <span>
+                // PROGRESSION SYSTEM
+            </span>
+
+            <h2>
+                LOS <strong>30 DÍAS</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="levels-grid">
+
+            <div class="level-card level-one">
+
+                <div class="level-number">
+                    01
+                </div>
+
+                <div class="level-content">
+
+                    <span>
+                        DÍAS 01 — 10
+                    </span>
+
+                    <h3>
+                        ORGANIZA TU MES
+                    </h3>
+
+                    <p>
+                        Aprende a distribuir tus primeros recursos y evita gastar demasiado al comenzar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card level-two">
+
+                <div class="level-number">
+                    02
+                </div>
+
+                <div class="level-content">
+
+                    <span>
+                        DÍAS 11 — 20
+                    </span>
+
+                    <h3>
+                        TOMA DECISIONES
+                    </h3>
+
+                    <p>
+                        Aparecen nuevas oportunidades, gastos y eventos que pueden cambiar tu economía.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card level-three">
+
+                <div class="level-number">
+                    03
+                </div>
+
+                <div class="level-content">
+
+                    <span>
+                        DÍAS 21 — 30
+                    </span>
+
+                    <h3>
+                        LLEGA A FIN DE MES
+                    </h3>
+
+                    <p>
+                        Administra tus últimos recursos y consigue llegar al día 30 con la mejor situación posible.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PERSONAJE -->
+
+    <div class="characters-section">
+
+        <div class="section-title">
+
+            <span>
+                // PLAYER CHARACTER
+            </span>
+
+            <h2>
+                TU <strong>PERSONAJE</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="characters-grid">
+
+            <div class="character-card">
+
+                <div class="character-image">
+                    🧑‍💼
+                </div>
+
+                <h3>
+                    JUGADOR
+                </h3>
+
+                <p>
+                    Personaje encargado de recorrer el mes, tomar decisiones y administrar sus recursos.
+                </p>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-image">
+                    💼
+                </div>
+
+                <h3>
+                    VIDA COTIDIANA
+                </h3>
+
+                <p>
+                    Durante la partida aparecen situaciones relacionadas con trabajo, compras, transporte, alimentación y ahorro.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GALERÍA -->
+
+    <div class="gallery-section">
+
+        <div class="section-title">
+
+            <span>
+                // VISUAL DATABASE
+            </span>
+
+            <h2>
+                GALERÍA DEL <strong>JUEGO</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item large">
+
+                <img
+                    src="img/portada.png"
+                    alt="Portada de Llega a Fin de Mes"
+                >
+
+                <div class="gallery-caption">
+                    01 // PANTALLA INICIAL
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="img/gameplay.png"
+                    alt="Gameplay de Llega a Fin de Mes"
+                >
+
+                <div class="gallery-caption">
+                    02 // GAMEPLAY
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="img/decision1.png"
+                    alt="Decisiones financieras del juego"
+                >
+
+                <div class="gallery-caption">
+                    03 // DECISIÓN FINANCIERA
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="img/personajes.png"
+                    alt="Personaje de Llega a Fin de Mes"
+                >
+
+                <div class="gallery-caption">
+                    04 // PERSONAJE
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TECNOLOGÍAS -->
+
+    <div class="technologies">
+
+        <div class="section-title">
+
+            <span>
+                // DEVELOPMENT LOADOUT
+            </span>
+
+            <h2>
+                TECNOLOGÍAS <strong>UTILIZADAS</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="technology-list">
+
+            <div>
+                HTML5
+            </div>
+
+            <div>
+                CSS3
+            </div>
+
+            <div>
+                JAVASCRIPT
+            </div>
+
+            <div>
+                DOM API
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="final-cta">
+
+    <span>
+        // READY PLAYER?
+    </span>
+
+    <h2>
+        ¿LISTO PARA <strong>ADMINISTRAR TU MES?</strong>
+    </h2>
+
+    <a
+        href="#jugar"
+        class="main-button"
+    >
+        ▶ JUGAR LLEGA A FIN DE MES
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ▲ GAME<span>DEV</span>
+    </div>
+
+    <p>
+        LLEGA A FIN DE MES // FINANCIAL EDUCATIONAL GAME
+    </p>
+
+    <a href="../index.html">
+        ← VOLVER AL PORTAFOLIO
+    </a>
+
+</footer>
+
+
+<script src="juego6.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Héroe del Agua | Game 04</title>
+
+<link rel="stylesheet" href="juego4.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background">
+    <div class="grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+</div>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+            <span>▲</span> GAME<span>DEV</span>
+        </a>
+
+        <a href="../index.html" class="back-button">
+            ← VOLVER AL PORTAFOLIO
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="game-hero">
+
+    <div class="hero-content">
+
+        <div class="game-label">
+            GAME 04 // ENVIRONMENTAL GAME
+        </div>
+
+        <h1>
+            HÉROE <span>DEL AGUA</span>
+        </h1>
+
+        <p>
+            ¡Salva el agua, salva el planeta! Recolecta agua,
+            limpia el ambiente y supera diferentes niveles.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#jugar" class="main-button">
+                ▶ JUGAR AHORA
+            </a>
+
+            <a href="#informacion" class="outline-button">
+                VER INFORMACIÓN
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img src="img/portada.png" alt="Portada de Héroe del Agua">
+
+        <div class="image-label">
+            HEROE DEL AGUA // READY
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GAMEPLAY
+===================================================== -->
+
+<section class="game-section" id="jugar">
+
+    <div class="section-title">
+
+        <span>// GAMEPLAY</span>
+
+        <h2>
+            JUEGA <strong>HÉROE DEL AGUA</strong>
+        </h2>
+
+        <p>
+            Explora los escenarios, recoge recursos y completa
+            la misión antes de que se termine el tiempo.
+        </p>
+
+    </div>
+
+
+    <div class="game-container">
+
+        <div class="game-frame">
+
+            <canvas id="game"></canvas>
+
+            <!-- MENÚ PRINCIPAL -->
+
+            <div id="menu" class="game-screen">
+
+                <div class="water-logo">
+                    💧
+                </div>
+
+                <h1>
+                    HÉROE DEL AGUA
+                </h1>
+
+                <p class="subtitle">
+                    ¡Salva el agua, salva el planeta!
+                </p>
+
+                <div class="menuButtons">
+
+                    <button id="play">
+                        JUGAR
+                    </button>
+
+                    <button id="levels">
+                        NIVELES
+                    </button>
+
+                    <button id="instructions">
+                        INSTRUCCIONES
+                    </button>
+
+                    <button id="records">
+                        RÉCORD
+                    </button>
+
+                </div>
+
+                <p class="controls">
+                    W A S D / FLECHAS · MOVER
+                </p>
+
+            </div>
+
+
+            <!-- NIVELES -->
+
+            <div id="levelsScreen" class="game-screen hidden">
+
+                <div class="game-panel">
+
+                    <h2>
+                        SELECCIONA NIVEL
+                    </h2>
+
+                    <div id="levelList"></div>
+
+                    <button class="back">
+                        VOLVER
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INSTRUCCIONES -->
+
+            <div id="instructionsScreen" class="game-screen hidden">
+
+                <div class="game-panel">
+
+                    <h2>
+                        ¿CÓMO JUGAR?
+                    </h2>
+
+                    <p>💧 Recolecta gotas para acumular agua.</p>
+                    <p>🚰 Cierra los grifos para ahorrar agua.</p>
+                    <p>♻️ Recoge residuos para limpiar la ciudad.</p>
+                    <p>🧴 Elimina los plásticos del agua.</p>
+                    <p>⚠️ Evita los objetos peligrosos.</p>
+                    <p>⭐ Consigue power-ups para mejorar tus habilidades.</p>
+                    <p>🔥 Haz combos para conseguir más puntos.</p>
+                    <p>❤️ Tienes 3 vidas.</p>
+                    <p>⏱️ Completa la misión antes de que termine el tiempo.</p>
+                    <p>🛡️ Puedes conseguir escudos para protegerte.</p>
+                    <p>⌨️ Usa WASD o las flechas para moverte.</p>
+
+                    <button class="back">
+                        VOLVER
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RÉCORDS -->
+
+            <div id="recordsScreen" class="game-screen hidden">
+
+                <div class="game-panel">
+
+                    <h2>
+                        🏆 RÉCORDS
+                    </h2>
+
+                    <div class="record">
+                        PUNTUACIÓN
+                        <br>
+                        <b id="bestScore">0</b>
+                    </div>
+
+                    <div class="record">
+                        MEJOR COMBO
+                        <br>
+                        <b id="bestCombo">0</b>
+                    </div>
+
+                    <div class="record">
+                        NIVEL MÁXIMO
+                        <br>
+                        <b id="bestLevel">0</b>
+                    </div>
+
+                    <button id="clearRecord">
+                        BORRAR RÉCORD
+                    </button>
+
+                    <button class="back">
+                        VOLVER
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- HUD -->
+
+            <div id="hud" class="hidden">
+
+                <div class="hudBox">
+                    💧 <span id="water">0</span>
+                </div>
+
+                <div class="hudBox">
+                    ⭐ <span id="score">0</span>
+                </div>
+
+                <div class="hudBox">
+                    ❤️ <span id="lives">♥♥♥</span>
+                </div>
+
+                <div class="hudBox">
+                    ⏱️ <span id="timer">00:00</span>
+                </div>
+
+                <div class="hudBox">
+                    🔥 <span id="combo">x0</span>
+                </div>
+
+                <div class="hudLevel" id="levelName">
+                    NIVEL 1
+                </div>
+
+                <button id="pause">
+                    Ⅱ
+                </button>
+
+            </div>
+
+
+            <!-- MISIÓN -->
+
+            <div id="mission" class="hidden">
+
+                <div id="missionText"></div>
+
+                <div class="progress">
+                    <div id="missionProgress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div id="resultScreen" class="game-screen hidden">
+
+                <div class="game-panel result">
+
+                    <div id="resultStars">
+                        ★
+                    </div>
+
+                    <h2 id="resultTitle">
+                        NIVEL 1
+                    </h2>
+
+                    <p id="resultMessage"></p>
+
+                    <div id="resultStats"></div>
+
+                    <button id="resultAction">
+                        COMENZAR
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIENDA -->
+
+            <div id="shopScreen" class="game-screen hidden">
+
+                <div class="game-panel">
+
+                    <h2>
+                        🛒 CENTRO DE AYUDA
+                    </h2>
+
+                    <p>
+                        Agua disponible:
+                        💧 <b id="shopWater">0</b>
+                    </p>
+
+                    <button data-buy="shield">
+                        🛡️ ESCUDO · 100
+                    </button>
+
+                    <button data-buy="magnet">
+                        🧲 IMÁN · 120
+                    </button>
+
+                    <button data-buy="speed">
+                        ⚡ VELOCIDAD · 100
+                    </button>
+
+                    <button data-buy="time">
+                        ⏱️ +30 SEGUNDOS · 80
+                    </button>
+
+                    <button id="continueShop">
+                        SIGUIENTE NIVEL
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAUSA -->
+
+            <div id="pauseScreen" class="game-screen hidden">
+
+                <div class="game-panel">
+
+                    <h2>
+                        PAUSA
+                    </h2>
+
+                    <p>
+                        El planeta necesita tu ayuda.
+                    </p>
+
+                    <button id="resume">
+                        CONTINUAR
+                    </button>
+
+                    <button id="pauseMenu">
+                        MENÚ PRINCIPAL
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INFORMACIÓN
+===================================================== -->
+
+<section class="game-info-section" id="informacion">
+
+    <div class="section-title">
+
+        <span>// GAME DATABASE</span>
+
+        <h2>
+            SOBRE EL <strong>JUEGO</strong>
+        </h2>
+
+    </div>
+
+
+    <div class="description-box">
+
+        <div class="box-number">
+            01
+        </div>
+
+        <div>
+
+            <h3>
+                ¿QUÉ ES HÉROE DEL AGUA?
+            </h3>
+
+            <p>
+                Héroe del Agua es un videojuego educativo y
+                ambiental en el que el jugador debe cuidar los
+                recursos naturales mientras explora diferentes
+                escenarios. El objetivo es recolectar agua,
+                cerrar grifos, limpiar residuos y reducir la
+                contaminación.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                💧
+            </div>
+
+            <h3>
+                OBJETIVO
+            </h3>
+
+            <p>
+                Completar las misiones de cada nivel mientras
+                se acumulan puntos y recursos de agua.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                📜
+            </div>
+
+            <h3>
+                REGLAS
+            </h3>
+
+            <ul>
+
+                <li>Recolectar los objetos necesarios.</li>
+                <li>Evitar objetos peligrosos.</li>
+                <li>Completar la misión antes del tiempo límite.</li>
+                <li>Conservar las vidas disponibles.</li>
+                <li>Conseguir power-ups.</li>
+                <li>Completar los cinco niveles.</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                🕹️
+            </div>
+
+            <h3>
+                CONTROLES
+            </h3>
+
+            <p class="control-key">
+                WASD
+            </p>
+
+            <p class="control-key">
+                ↑ ↓ ← →
+            </p>
+
+            <p>
+                Utiliza WASD o las flechas para mover al héroe
+                por los diferentes escenarios.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                MECÁNICA
+            </h3>
+
+            <p>
+                Explora el mapa, recoge objetos, consigue
+                power-ups y completa los objetivos antes de
+                que se termine el tiempo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NIVELES
+    ===================================================== -->
+
+    <div class="levels-section">
+
+        <div class="levels-title">
+
+            <span>// PROGRESSION SYSTEM</span>
+
+            <h2>
+                LOS <strong>5 NIVELES</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="levels-grid">
+
+            <div class="level-card">
+
+                <div class="level-number">
+                    01
+                </div>
+
+                <div class="level-content">
+
+                    <span>NIVEL 01</span>
+
+                    <h3>
+                        CIUDAD
+                    </h3>
+
+                    <p>
+                        Cierra grifos y recoge agua para
+                        ayudar a la ciudad.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card">
+
+                <div class="level-number">
+                    02
+                </div>
+
+                <div class="level-content">
+
+                    <span>NIVEL 02</span>
+
+                    <h3>
+                        BOSQUE
+                    </h3>
+
+                    <p>
+                        Recoge residuos y protege los
+                        espacios naturales.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card">
+
+                <div class="level-number">
+                    03
+                </div>
+
+                <div class="level-content">
+
+                    <span>NIVEL 03</span>
+
+                    <h3>
+                        RÍO
+                    </h3>
+
+                    <p>
+                        Limpia el río y evita la contaminación
+                        del agua.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card">
+
+                <div class="level-number">
+                    04
+                </div>
+
+                <div class="level-content">
+
+                    <span>NIVEL 04</span>
+
+                    <h3>
+                        OCÉANO
+                    </h3>
+
+                    <p>
+                        Elimina los plásticos para proteger
+                        la vida marina.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-card">
+
+                <div class="level-number">
+                    05
+                </div>
+
+                <div class="level-content">
+
+                    <span>NIVEL 05</span>
+
+                    <h3>
+                        PLANETA
+                    </h3>
+
+                    <p>
+                        Completa el desafío final y salva
+                        el planeta.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         POWER UPS
+    ===================================================== -->
+
+    <div class="characters-section">
+
+        <div class="section-title">
+
+            <span>// POWER UP SYSTEM</span>
+
+            <h2>
+                CENTRO DE <strong>AYUDA</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="characters-grid">
+
+            <div class="character-card">
+
+                <div class="character-image">
+                    🛡️
+                </div>
+
+                <h3>
+                    ESCUDO
+                </h3>
+
+                <p>
+                    Protege al héroe de los objetos peligrosos
+                    durante un tiempo limitado.
+                </p>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-image">
+                    🧲
+                </div>
+
+                <h3>
+                    IMÁN
+                </h3>
+
+                <p>
+                    Atrae los objetos cercanos para facilitar
+                    la recolección.
+                </p>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-image">
+                    ⚡
+                </div>
+
+                <h3>
+                    VELOCIDAD
+                </h3>
+
+                <p>
+                    Aumenta temporalmente la velocidad
+                    de movimiento del héroe.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GALERÍA
+    ===================================================== -->
+
+    <div class="gallery-section">
+
+        <div class="section-title">
+
+            <span>// VISUAL DATABASE</span>
+
+            <h2>
+                GALERÍA DEL <strong>JUEGO</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item large">
+
+                <img
+                    src="img/portada.png"
+                    alt="Portada de Héroe del Agua"
+                >
+
+                <div class="gallery-caption">
+                    01 // PANTALLA INICIAL
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="img/gameplay.png"
+                    alt="Gameplay de Héroe del Agua"
+                >
+
+                <div class="gallery-caption">
+                    02 // GAMEPLAY
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="img/niveles.png"
+                    alt="Niveles de Héroe del Agua"
+                >
+
+                <div class="gallery-caption">
+                    03 // NIVELES
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TECNOLOGÍAS
+    ===================================================== -->
+
+    <div class="technologies">
+
+        <div class="section-title">
+
+            <span>// DEVELOPMENT LOADOUT</span>
+
+            <h2>
+                TECNOLOGÍAS <strong>UTILIZADAS</strong>
+            </h2>
+
+        </div>
+
+
+        <div class="technology-list">
+
+            <div>
+                HTML5
+            </div>
+
+            <div>
+                CSS3
+            </div>
+
+            <div>
+                JAVASCRIPT
+            </div>
+
+            <div>
+                CANVAS API
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="final-cta">
+
+    <span>
+        // READY PLAYER?
+    </span>
+
+    <h2>
+        ¿LISTO PARA <strong>SALVAR EL AGUA</strong>?
+    </h2>
+
+    <a href="#jugar" class="main-button">
+        ▶ JUGAR HÉROE DEL AGUA
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ▲ GAME<span>DEV</span>
+    </div>
+
+    <p>
+        HÉROE DEL AGUA // ENVIRONMENTAL GAME
+    </p>
+
+    <a href="../index.html">
+        ← VOLVER AL PORTAFOLIO
+    </a>
+
+</footer>
+
+
+<script src="juego4.js"></script>
+
+</body>
+</html>
