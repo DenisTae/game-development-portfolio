@@ -5,7 +5,7 @@
 ## 🚀 Jugar en Línea
 Puedes jugar directamente desde el navegador haciendo clic en el siguiente enlace:
 
-👉 **[Jugar a Ecocity en Vivo](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)**
+👉 **[Jugar a Ecocity en Vivo](https://denistae.github.io/game-development-portfolio/juego2/juego2.html)**
 
 ---
 
