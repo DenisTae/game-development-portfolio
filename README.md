@@ -42,7 +42,6 @@ Puedes revisar la descripción de cada proyecto o jugarlos directamente haciendo
 | **05** | **Detrás de la Pantalla** | Novela Visual | Aventura narrativa sobre el ciberbullying con mecánicas de impacto emocional. | [▶ Jugar](https://denistae.github.io/game-development-portfolio/juego5/juego5.html) |
 | **06** | **Llega a Fin de Mes** | Simulador de Vida | Sobrevive 30 días gestionando tu sueldo, ahorros y felicidad en una ciudad interactiva. | [▶ Jugar](https://denistae.github.io/game-development-portfolio/juego6/juego6.html) |
 
-*(Nota: No olvides reemplazar `TU_USUARIO` en los enlaces de la tabla por tu usuario real de GitHub para que funcionen los accesos directos).*
 
 ---
 
