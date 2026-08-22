@@ -5,8 +5,6 @@
 ## 🚀 Enlaces Rápidos
 * 🌐 **[Jugar en Línea](https://denistae.github.io/game-development-portfolio/juego1/juego1.html)**.
 
-*(Nota: No olvides cambiar `TU_USUARIO` en ambos enlaces por tu nombre de usuario real de GitHub).*
-
 ---
 
 ## 📌 Descripción del Proyecto
